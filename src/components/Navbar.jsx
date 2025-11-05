@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/vdc_3.svg";
+import logo from "../assets/vdc_4.svg";
 
 function scrollToId(id) {
   if (!id) return;
@@ -15,14 +15,14 @@ function scrollToId(id) {
 
 export default function Navbar() {
   return (
-    <header className="border-b" role="banner">
+    <header className="border-b border-secondary/20 bg-white" role="banner">
       <div className="container flex items-center justify-between py-4">
         <div className="flex items-center gap-4">
           <Link to="/" className="flex items-center gap-2">
             <img src={logo} alt="VDCSoft Logo" className="h-10 w-auto" />
-            <span className="text-xl font-bold text-primary">VDCSoft</span>
+            <span className="text-xl font-bold text-accent">VDCsoft</span>
           </Link>
-          <span className="text-sm text-gray-500">
+          <span className="text-sm text-brandText/60">
             Based in Sweden · GDPR-ready
           </span>
         </div>

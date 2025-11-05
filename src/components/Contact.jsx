@@ -18,10 +18,10 @@ export default function Contact() {
   if (submitted)
     return (
       <div id="contact" className="p-6 bg-white rounded-2xl shadow-md">
-        <h3 className="text-xl font-semibold">
-          Thanks — we’ll reply within 24 hours
+        <h3 className="text-xl font-semibold text-brandText">
+          Thanks — we'll reply within 24 hours
         </h3>
-        <p className="text-gray-600 mt-2">
+        <p className="text-brandText/70 mt-2">
           If it's urgent, email vdfcsoft@outlook.com
         </p>
       </div>

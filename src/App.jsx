@@ -36,7 +36,7 @@ export default function App() {
       </main>
 
       <footer className="border-t mt-8">
-        <div className="container py-4 text-center text-sm text-gray-500">
+        <div className="container py-4 text-center text-sm text-brandText/60">
           © {new Date().getFullYear()} VDCSoft
         </div>
       </footer>

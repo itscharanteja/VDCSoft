@@ -31,8 +31,8 @@ const cards = [
 export default function Services() {
   return (
     <div id="services">
-      <h2 className="text-2xl font-semibold">Services</h2>
-      <p className="text-gray-600 mt-2">
+      <h2 className="text-2xl font-semibold text-brandText">Services</h2>
+      <p className="text-brandText/70 mt-2">
         What we do — outcome-focused deliverables for SMEs.
       </p>
       <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 perspective-1000">
@@ -57,8 +57,10 @@ export default function Services() {
             </div>
 
             <h3 className="font-semibold text-lg relative z-10">{c.title}</h3>
-            <p className="text-sm text-gray-600 mt-2 relative z-10">{c.desc}</p>
-            <ul className="mt-3 text-sm text-gray-700 list-disc pl-5 space-y-1 relative z-10">
+            <p className="text-sm text-brandText/70 mt-2 relative z-10">
+              {c.desc}
+            </p>
+            <ul className="mt-3 text-sm text-brandText/80 list-disc pl-5 space-y-1 relative z-10">
               {c.bullets.map((b) => (
                 <li key={b}>{b}</li>
               ))}

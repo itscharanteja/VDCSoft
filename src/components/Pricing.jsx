@@ -2,7 +2,7 @@ import React from "react";
 
 const plans = [
   {
-    name: "Launch",
+    name: "Kickstart",
     price: "SEK 10,000–15,000",
     features: [
       "One-page website or simple multi-page site",
@@ -13,7 +13,7 @@ const plans = [
     highlight: "Perfect for small businesses getting started online",
   },
   {
-    name: "Growth",
+    name: "Momentum",
     price: "SEK 22,000–35,000",
     features: [
       "Multi-page website",
@@ -25,7 +25,7 @@ const plans = [
     highlight: "Ideal for growing businesses needing more features",
   },
   {
-    name: "Scale",
+    name: "Elevate",
     price: "SEK 50,000–80,000",
     features: [
       "Full website development (blog/e-commerce)",
@@ -42,13 +42,15 @@ export default function Pricing() {
   return (
     <div id="pricing" className="relative">
       {/* Early Stage Offer Banner */}
-      <div className="absolute -top-12 left-0 right-0 bg-gradient-to-r from-purple-600 to-purple-400 text-white py-3 px-4 rounded-lg text-center text-sm">
+      <div className="absolute -top-12 left-0 right-0 bg-gradient-to-r from-accent to-primary text-background py-3 px-4 rounded-lg text-center text-sm">
         <span className="font-semibold">Limited Time Offer:</span> First 5
         clients get 10-15% off any package! 🎉
       </div>
 
-      <h2 className="text-2xl font-semibold">Packages for Every Stage</h2>
-      <p className="text-gray-600 mt-2">
+      <h2 className="text-2xl font-semibold text-brandText">
+        Packages for Every Stage
+      </h2>
+      <p className="text-brandText/70 mt-2">
         Transparent pricing with guaranteed results and no hidden fees.
       </p>
 
@@ -60,10 +62,12 @@ export default function Pricing() {
           >
             {/* Package Name and Price */}
             <div className="relative z-10">
-              <h3 className="text-lg font-semibold">{p.name}</h3>
+              <h3 className="text-lg font-semibold text-brandText">{p.name}</h3>
               <div className="mt-2">
-                <div className="text-2xl font-bold">{p.price}</div>
-                <p className="text-sm text-purple-600 mt-1">{p.highlight}</p>
+                <div className="text-2xl font-bold text-brandText">
+                  {p.price}
+                </div>
+                <p className="text-sm text-accent mt-1">{p.highlight}</p>
               </div>
 
               {/* Features List */}
@@ -71,7 +75,7 @@ export default function Pricing() {
                 {p.features.map((feature) => (
                   <li key={feature} className="flex items-start text-sm">
                     <svg
-                      className="w-5 h-5 text-purple-500 mr-2 flex-shrink-0"
+                      className="w-5 h-5 text-accent mr-2 flex-shrink-0"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -83,7 +87,7 @@ export default function Pricing() {
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    <span>{feature}</span>
+                    <span className="text-brandText/80">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -92,7 +96,7 @@ export default function Pricing() {
               <div className="mt-6">
                 <a
                   href="#contact"
-                  className="inline-block w-full px-4 py-3 bg-primary text-white rounded-xl text-center font-medium hover:bg-purple-700 transition-colors"
+                  className="inline-block w-full px-4 py-3 bg-accent text-background rounded-xl text-center font-medium hover:bg-accent/90 transition-colors"
                 >
                   Get Started
                 </a>
@@ -100,7 +104,7 @@ export default function Pricing() {
             </div>
 
             {/* Background Decoration */}
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
           </article>
         ))}
       </div>

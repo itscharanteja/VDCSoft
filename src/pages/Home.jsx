@@ -15,7 +15,7 @@ export default function Home() {
       <section className="container py-12">
         <Services />
       </section>
-      <section className="bg-gray-50 py-12">
+      <section className="bg-surface/50 py-12">
         <div className="container">
           <WhyUs />
         </div>

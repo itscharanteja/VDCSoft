@@ -61,8 +61,9 @@ export default function Process() {
   return (
     <section id="process" ref={ref} className="py-4">
       <h2 className="text-2xl font-semibold">Our process</h2>
-      <p className="text-gray-600 mt-2">
-        A clear 4-step delivery path so you always know what's next.
+      <p className="text-brandText/70 mt-2">
+        We follow a structured process to ensure consistent quality and results
+        with every project.
       </p>
 
       <div className="mt-12 relative h-[300px]">
@@ -74,7 +75,7 @@ export default function Process() {
           <motion.path
             d="M200,150 C300,150 350,150 450,150 C550,150 600,150 700,150 C800,150 850,150 950,150"
             fill="none"
-            stroke="#E9E5FF"
+            stroke="#D4C4B7"
             strokeWidth="4"
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
@@ -83,13 +84,13 @@ export default function Process() {
           <motion.path
             d="M200,150 C300,150 350,150 450,150 C550,150 600,150 700,150 C800,150 850,150 950,150"
             fill="none"
-            stroke="#4F46E5"
+            stroke="#8B7355"
             strokeWidth="4"
             strokeLinecap="round"
             initial="start"
             animate="end"
             variants={glowVariants}
-            style={{ filter: "drop-shadow(0 0 8px #4F46E5)" }}
+            style={{ filter: "drop-shadow(0 0 8px #A67F5D)" }}
           />
         </svg>
 
@@ -146,7 +147,7 @@ function CardWithIcons({ step, index, inView, stepVariants, spreadVariants }) {
           {step.icon}
         </div>
         <h4 className="mt-4 font-semibold">{step.title}</h4>
-        <div className="text-sm text-gray-500 mt-2">{step.desc}</div>
+        <div className="text-sm text-brandText/60 mt-2">{step.desc}</div>
       </div>
     </motion.div>
   );

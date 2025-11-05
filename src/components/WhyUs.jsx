@@ -6,28 +6,32 @@ export default function WhyUs() {
       <h2 className="text-2xl font-semibold">
         We’re new — that’s your advantage.
       </h2>
-      <p className="mt-3 text-gray-700">
+      <p className="mt-3 text-brandText/80">
         Senior-level execution at startup pricing. Fast delivery, direct founder
         contact, and transparent reporting.
       </p>
       <div className="mt-6 grid md:grid-cols-3 gap-6">
-        <div className="p-6 bg-white rounded-2xl shadow-sm">
-          <h4 className="font-semibold">Professional Execution</h4>
-          <p className="text-sm text-gray-600 mt-2">
+        <div className="p-6 bg-surface/50 rounded-2xl shadow-sm">
+          <h4 className="font-semibold text-brandText">
+            Professional Execution
+          </h4>
+          <p className="text-sm text-brandText/70 mt-2">
             Fast, professional websites at competitive rates with measurable
             performance improvements.
           </p>
         </div>
-        <div className="p-6 bg-white rounded-2xl shadow-sm">
-          <h4 className="font-semibold">Satisfaction Guarantee</h4>
-          <p className="text-sm text-gray-600 mt-2">
+        <div className="p-6 bg-surface/50 rounded-2xl shadow-sm">
+          <h4 className="font-semibold text-brandText">
+            Satisfaction Guarantee
+          </h4>
+          <p className="text-sm text-brandText/70 mt-2">
             Not satisfied in 30 days? Get 50% refund or a free optimization
             cycle.
           </p>
         </div>
-        <div className="p-6 bg-white rounded-2xl shadow-sm">
-          <h4 className="font-semibold">Transparent Pricing</h4>
-          <p className="text-sm text-gray-600 mt-2">
+        <div className="p-6 bg-surface/50 rounded-2xl shadow-sm">
+          <h4 className="font-semibold text-brandText">Transparent Pricing</h4>
+          <p className="text-sm text-brandText/70 mt-2">
             Clear pricing, no hidden fees, and personal commitment to your
             growth.
           </p>
@@ -35,10 +39,10 @@ export default function WhyUs() {
       </div>
       {/* Optional Services */}
       <div className="mt-6 grid md:grid-cols-2 gap-6">
-        <div className="p-6 rounded-2xl bg-white shadow-sm border border-purple-100">
-          <h4 className="font-semibold flex items-center">
+        <div className="p-6 rounded-2xl bg-white shadow-sm border border-secondary/30">
+          <h4 className="font-semibold flex items-center text-brandText">
             <svg
-              className="w-5 h-5 text-purple-500 mr-2"
+              className="w-5 h-5 text-accent mr-2"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -52,15 +56,15 @@ export default function WhyUs() {
             </svg>
             Ongoing Maintenance
           </h4>
-          <p className="text-sm text-gray-600 mt-2">
-            SEK 5,000–10,000/month for updates, backups, and security
-            maintenance.
+          <p className="text-sm text-brandText/70 mt-2">
+            Regular updates, backups, and comprehensive security maintenance to
+            keep your website running smoothly.
           </p>
         </div>
-        <div className="p-6 rounded-2xl bg-white shadow-sm border border-purple-100">
-          <h4 className="font-semibold flex items-center">
+        <div className="p-6 rounded-2xl bg-white shadow-sm border border-secondary/30">
+          <h4 className="font-semibold flex items-center text-brandText">
             <svg
-              className="w-5 h-5 text-purple-500 mr-2"
+              className="w-5 h-5 text-accent mr-2"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -80,21 +84,10 @@ export default function WhyUs() {
             </svg>
             Digital Marketing
           </h4>
-          <p className="text-sm text-gray-600 mt-2">
-            Starting at SEK 7,500/month for ad campaigns and organic SEO
-            efforts.
+          <p className="text-sm text-brandText/70 mt-2">
+            Strategic ad campaigns, organic SEO optimization, and comprehensive
+            digital marketing solutions.
           </p>
-        </div>
-      </div>
-
-      {/* Early Stage Offer */}
-      <div className="mt-6 p-6 rounded-2xl bg-gradient-to-r from-purple-100 via-purple-50 to-white border border-purple-100 glow-effect relative overflow-hidden">
-        <div className="relative z-10">
-          <strong className="text-purple-700">Early Stage Offer:</strong>{" "}
-          <span className="bg-gradient-to-r from-purple-700 to-purple-500 bg-clip-text text-transparent">
-            First 5 clients get 10-15% off any package! Plus, get a satisfaction
-            guarantee.
-          </span>
         </div>
       </div>
     </div>
