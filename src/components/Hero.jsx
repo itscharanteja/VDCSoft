@@ -104,39 +104,46 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.6 }}
-          className="mt-12 p-6 rounded-2xl bg-gradient-to-r from-secondary/30 via-secondary/20 to-white border-2 border-secondary/30 relative overflow-hidden group"
+          transition={{ delay: 0.1, duration: 0.4 }}
+          whileHover={{ scale: 1.02 }}
+          className="mt-12 relative overflow-hidden rounded-3xl border border-secondary/30 bg-gradient-to-r from-secondary/20 via-white/30 to-white px-8 py-8 shadow-xl backdrop-blur-2xl group"
         >
-          {/* Glass shine effect */}
-          <div className="absolute -inset-1 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full animate-shine" />
+          {/* Glass layers */}
+          <div className="pointer-events-none absolute inset-0">
+            <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-transparent opacity-70" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-secondary/20 via-transparent to-transparent opacity-30" />
+            <div className="absolute inset-y-[-30%] -left-1/3 w-1/2 -translate-x-full bg-gradient-to-r from-transparent via-white/70 to-transparent opacity-50 blur-xl animate-shine group-hover:opacity-80" />
           </div>
 
-          {/* Glass reflection overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent pointer-events-none" />
-
-          {/* Subtle shimmer */}
-          <div className="absolute inset-0 opacity-50">
-            <div className="absolute top-0 left-1/4 w-1/2 h-full bg-gradient-to-b from-white/30 via-transparent to-transparent blur-xl animate-pulse" />
+          {/* Offer content */}
+          <div className="relative z-10 flex flex-col gap-6 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
+            <div className="space-y-3 sm:max-w-md">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-secondary/80">
+                Early Stage Offer
+              </p>
+              <p className="text-2xl font-semibold text-brandText">
+                First 5 clients save up to 15% on any package.
+              </p>
+              <p className="text-sm text-brandText/70">
+                Launch with confidence - if you are not thrilled after the first
+                sprint, we make it right under our satisfaction guarantee.
+              </p>
+            </div>
+            <div className="flex flex-col items-center gap-3 sm:items-end">
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 rounded-2xl bg-accent px-5 py-3 text-sm font-semibold text-background shadow-lg transition hover:bg-accent/90 focus-ring"
+              >
+                Claim Your Discount
+                <span aria-hidden className="text-lg font-bold">
+                  &gt;
+                </span>
+              </a>
+              <span className="text-xs font-medium uppercase tracking-[0.25em] text-brandText/60">
+                Limited to first 5 projects
+              </span>
+            </div>
           </div>
-
-          {/* Content */}
-          <div className="relative z-10 group-hover:scale-[1.02] transition-transform duration-300 text-center">
-            <strong className="text-accent animate-pulse text-lg">
-              ✨ Early Stage Offer:
-            </strong>{" "}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-semibold text-lg">
-              First 5 clients get 10-15% off any package! Plus, get a
-              satisfaction guarantee.
-            </span>
-          </div>
-
-          {/* Corner highlights */}
-          <div className="absolute top-2 right-2 w-8 h-8 bg-white/30 rounded-full blur-md animate-pulse" />
-          <div
-            className="absolute bottom-2 left-2 w-8 h-8 bg-white/30 rounded-full blur-md animate-pulse"
-            style={{ animationDelay: "0.5s" }}
-          />
         </motion.div>
       </div>
     </section>

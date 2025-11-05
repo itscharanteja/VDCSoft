@@ -35,13 +35,19 @@
 
 @keyframes shine {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-120%);
+  }
+  45% {
+    transform: translateX(110%);
+  }
+  70% {
+    transform: translateX(160%);
   }
   100% {
-    transform: translateX(200%);
+    transform: translateX(160%);
   }
 }
 
 .animate-shine {
-  animation: shine 3s ease-in-out infinite;
+  animation: shine 4.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }

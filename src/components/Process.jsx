@@ -66,9 +66,9 @@ export default function Process() {
         with every project.
       </p>
 
-      <div className="mt-12 relative h-[300px]">
+      <div className="relative mt-12 md:h-[300px]">
         <svg
-          className="absolute inset-0 w-full h-full"
+          className="absolute inset-0 hidden h-full w-full md:block"
           viewBox="0 0 1000 300"
           preserveAspectRatio="xMidYMid meet"
         >
@@ -94,7 +94,7 @@ export default function Process() {
           />
         </svg>
 
-        <div className="grid md:grid-cols-4 gap-6 relative z-10">
+        <div className="relative z-10 grid gap-5 sm:grid-cols-2 md:grid-cols-4">
           {steps.map((s, i) => (
             <CardWithIcons
               key={s.title}

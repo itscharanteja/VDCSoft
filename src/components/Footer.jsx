@@ -17,21 +17,34 @@ export default function Footer() {
         </div>
 
         {/* Main Footer Content */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <div>
             <div className="text-xl font-bold text-accent">VDCSoft</div>
             <div className="text-sm text-brandText/60">
               Based in Sweden · GDPR-ready
             </div>
           </div>
-          <nav aria-label="Footer navigation" className="flex gap-4">
-            <Link to="/">Home</Link>
-            <a href="#services">Services</a>
-            <a href="#process">Process</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#contact">Contact</a>
+          <nav
+            aria-label="Footer navigation"
+            className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm text-brandText/70"
+          >
+            <Link to="/" className="transition hover:text-brandText">
+              Home
+            </Link>
+            <a className="transition hover:text-brandText" href="#services">
+              Services
+            </a>
+            <a className="transition hover:text-brandText" href="#process">
+              Process
+            </a>
+            <a className="transition hover:text-brandText" href="#pricing">
+              Pricing
+            </a>
+            <a className="transition hover:text-brandText" href="#contact">
+              Contact
+            </a>
           </nav>
-          <div className="text-sm text-gray-500">
+          <div className="text-center text-sm text-gray-500 md:text-right">
             © {year} VDCSoft ·{" "}
             <Link to="/privacy" className="underline">
               Privacy
