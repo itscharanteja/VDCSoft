@@ -7,21 +7,61 @@ export default function Contact() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const [submitted, setSubmitted] = useState(false);
 
-  const onSubmit = (data) => {
-    // In a real app we'd POST to an API. Here we simulate success.
-    console.log("Contact submit", data);
-    setSubmitted(true);
+  // Replace YOUR_FORM_ID with your actual Formspree form ID
+  const formspreeEndpoint = "https://formspree.io/f/xnnlawpb";
+
+  const [status, setStatus] = useState("idle");
+  const [serverError, setServerError] = useState("");
+
+  const onSubmit = async (data) => {
+    setStatus("loading");
+    setServerError("");
+
+    try {
+      const response = await fetch(formspreeEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: data.name,
+          company: data.company || "Not specified",
+          email: data.email,
+          budget: data.budget || "Not specified",
+          message: data.message,
+          _subject: `New website enquiry from ${data.name}`,
+        }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Unable to send message right now.");
+      }
+
+      setStatus("success");
+    } catch (error) {
+      console.error("Contact form error", error);
+      setServerError(
+        error.message ||
+          "Something went wrong while sending your message. Please try again or email vdfcsoft@outlook.com."
+      );
+      setStatus("error");
+    }
   };
 
-  if (submitted)
+  if (status === "success")
     return (
-      <div id="contact" className="p-6 bg-white rounded-2xl shadow-md">
+      <div
+        id="contact"
+        className="rounded-2xl bg-white p-6 shadow-md"
+        aria-live="polite"
+      >
         <h3 className="text-xl font-semibold text-brandText">
           Thanks — we'll reply within 24 hours
         </h3>
-        <p className="text-brandText/70 mt-2">
+        <p className="mt-2 text-brandText/70">
           If it's urgent, email vdfcsoft@outlook.com
         </p>
       </div>
@@ -100,13 +140,30 @@ export default function Contact() {
           </div>
         )}
       </div>
+      {serverError && (
+        <div
+          className="mt-3 text-sm text-red-600"
+          role="alert"
+          aria-live="assertive"
+        >
+          {serverError}
+        </div>
+      )}
       <div className="mt-4">
         <button
           type="submit"
-          className="px-5 py-3 bg-primary text-white rounded-2xl"
+          className="px-5 py-3 rounded-2xl bg-primary text-white transition disabled:cursor-not-allowed disabled:bg-primary/60"
+          disabled={status === "loading"}
         >
-          Send message
+          {status === "loading" ? "Sending..." : "Send message"}
         </button>
+        <p className="mt-2 text-xs text-brandText/50">
+          Messages are delivered directly to our team inbox (
+          <a className="underline" href="mailto:vdfcsoft@outlook.com">
+            vdfcsoft@outlook.com
+          </a>
+          ).
+        </p>
       </div>
     </form>
   );
