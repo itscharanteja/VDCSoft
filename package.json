@@ -2,7 +2,6 @@
   "name": "vdcsoft",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/itscharanteja/vdcsoft",
   "scripts": {
     "predeploy": "npm run build && cp dist/index.html dist/404.html",
     "deploy": "gh-pages -d dist",
