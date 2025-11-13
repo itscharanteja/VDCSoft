@@ -55,7 +55,12 @@ cp .env.example .env
 
 Deployment
 
-- Run `npm run build` to produce the static assets inside `dist/`, then upload that folder to any hosting provider that serves static files (Vercel, Netlify, S3 + CloudFront, etc.). No provider-specific configuration lives in this repo, so feel free to wire it up however you like.
+- Run `npm run build` to produce the static assets inside `dist/`, then upload that folder to any hosting provider that serves static files (Vercel, Netlify, S3 + CloudFront, etc.).
+- GitHub Pages workflow:
+  - Ensure `vite.config.js` keeps `base: "/vdcsoft/"` so asset paths match the repository name.
+  - Commit your changes, then deploy with `npm run deploy`. The script builds the site, copies `dist/index.html` to `dist/404.html` for SPA routing, and publishes `dist/` to the `gh-pages` branch using the `gh-pages` package.
+  - In GitHub → Settings → Pages, pick `Deploy from branch`, select `gh-pages`, folder `/ (root)`, and save. The site appears at `https://<username>.github.io/vdcsoft/` once Pages finishes provisioning.
+  - Re-run `npm run deploy` after each change to push an updated build to the `gh-pages` branch.
 
 SEO & accessibility notes
 
