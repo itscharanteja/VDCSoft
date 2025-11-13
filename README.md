@@ -55,21 +55,7 @@ cp .env.example .env
 
 Deployment
 
-- The project is ready to deploy to Vercel, Netlify or similar. Point the build command to `npm run build` and the publish directory to `dist`.
-- GitHub Pages workflow:
-  - Ensure `vite.config.js` has `base: "/<repo-name>/"` (or `"/"` when using `<user>.github.io`). This makes Vite emit correct asset URLs.
-  - Commit the project to a GitHub repository. Example:
-    ```bash
-    git init
-    git add .
-    git commit -m "Initial commit"
-    git branch -M main
-    git remote add origin git@github.com:<user>/<repo>.git
-    git push -u origin main
-    ```
-  - Deploy by running `npm run deploy`. The `predeploy`/`deploy` scripts build the site, copy `dist/index.html` to `dist/404.html` so client-side routes work, and push the `dist` folder to the `gh-pages` branch via `gh-pages`.
-  - In GitHub → Settings → Pages, select `Deploy from branch`, choose the `gh-pages` branch and `/ (root)` folder. The site goes live at `https://<user>.github.io/<repo>/` once Pages finishes provisioning.
-  - Re-run `npm run deploy` after every code change to update the hosted site (this automatically overwrites the previous `gh-pages` branch contents).
+- Run `npm run build` to produce the static assets inside `dist/`, then upload that folder to any hosting provider that serves static files (Vercel, Netlify, S3 + CloudFront, etc.). No provider-specific configuration lives in this repo, so feel free to wire it up however you like.
 
 SEO & accessibility notes
 
