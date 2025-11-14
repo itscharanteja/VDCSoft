@@ -38,7 +38,7 @@ export default function FounderNote() {
       <h3 className="text-xl font-semibold text-brandText">
         Notes from the founders
       </h3>
-      <div className="relative mt-6 h-36 overflow-hidden">
+      <div className="relative mt-6 min-h-[11rem] md:min-h-[9rem] overflow-hidden">
         {quotes.map((quote, i) => (
           <blockquote
             key={quote.name}

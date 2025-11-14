@@ -8,7 +8,7 @@ import {
 
 export default function Hero() {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white pt-12 pb-20">
       <div className="container">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <motion.div

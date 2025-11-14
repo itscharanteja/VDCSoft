@@ -22,9 +22,9 @@ body {
 }
 
 .container {
-  width: min(1400px, calc(100% - 3rem));
+  width: min(1500px, calc(100% - 0.2rem)); /* trim side gutters further */
   margin-inline: auto;
-  padding: clamp(1.5rem, 4vw, 2.5rem);
+  padding: clamp(0.75rem, 1.5vw, 1rem);
 }
 
 .focus-ring:focus {

@@ -45,7 +45,7 @@ export default function Contact() {
       console.error("Contact form error", error);
       setServerError(
         error.message ||
-          "Something went wrong while sending your message. Please try again or email vdfcsoft@outlook.com."
+          "Something went wrong while sending your message. Please try again or email vdcsoft@outlook.com."
       );
       setStatus("error");
     }
@@ -62,7 +62,7 @@ export default function Contact() {
           Thanks — we'll reply within 24 hours
         </h3>
         <p className="mt-2 text-brandText/70">
-          If it's urgent, email vdfcsoft@outlook.com
+          If it's urgent, email vdcsoft@outlook.com
         </p>
       </div>
     );
@@ -159,8 +159,8 @@ export default function Contact() {
         </button>
         <p className="mt-2 text-xs text-brandText/50">
           Messages are delivered directly to our team inbox (
-          <a className="underline" href="mailto:vdfcsoft@outlook.com">
-            vdfcsoft@outlook.com
+          <a className="underline" href="mailto:vdcsoft@outlook.com">
+            vdcsoft@outlook.com
           </a>
           ).
         </p>
