@@ -40,9 +40,9 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <div id="pricing" className="relative">
+    <div id="pricing" className="relative pt-4 md:pt-16">
       {/* Early Stage Offer Banner */}
-      <div className="left-0 right-0 rounded-2xl bg-gradient-to-r from-accent to-primary px-4 py-3 text-center text-sm text-background shadow-lg md:absolute md:-top-12">
+      <div className="left-0 right-0 mb-6 rounded-2xl bg-gradient-to-r from-accent to-primary px-4 py-3 text-center text-sm text-background shadow-lg md:absolute md:-top-6 md:mb-0">
         <span className="font-semibold">Limited Time Offer:</span> First 5
         clients get 10-15% off any package! 🎉
       </div>
@@ -103,7 +103,9 @@ export default function Pricing() {
                 className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-accent px-4 py-3 text-sm font-semibold text-background transition hover:bg-accent/90 focus-ring"
               >
                 Get Started
-                <span aria-hidden className="text-base font-bold">&gt;</span>
+                <span aria-hidden className="text-base font-bold">
+                  &gt;
+                </span>
               </a>
             </div>
 

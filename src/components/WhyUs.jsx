@@ -11,7 +11,7 @@ export default function WhyUs() {
         contact, and transparent reporting.
       </p>
       <div className="mt-6 grid md:grid-cols-3 gap-6">
-        <div className="p-6 bg-surface/50 rounded-2xl shadow-sm">
+        <div className="p-6 rounded-2xl bg-white shadow-sm border border-secondary/30">
           <h4 className="font-semibold text-brandText">
             Professional Execution
           </h4>
@@ -20,7 +20,7 @@ export default function WhyUs() {
             performance improvements.
           </p>
         </div>
-        <div className="p-6 bg-surface/50 rounded-2xl shadow-sm">
+        <div className="p-6 rounded-2xl bg-white shadow-sm border border-secondary/30">
           <h4 className="font-semibold text-brandText">
             Satisfaction Guarantee
           </h4>
@@ -29,7 +29,7 @@ export default function WhyUs() {
             cycle.
           </p>
         </div>
-        <div className="p-6 bg-surface/50 rounded-2xl shadow-sm">
+        <div className="p-6 rounded-2xl bg-white shadow-sm border border-secondary/30">
           <h4 className="font-semibold text-brandText">Transparent Pricing</h4>
           <p className="text-sm text-brandText/70 mt-2">
             Clear pricing, no hidden fees, and personal commitment to your
