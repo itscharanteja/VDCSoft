@@ -1,7 +1,7 @@
 const CONTACT_TO =
   process.env.CONTACT_TO || process.env.CONTACT_EMAIL || "vdfcsoft@outlook.com";
 const CONTACT_FROM =
-  process.env.CONTACT_FROM || "VDCSoft <onboarding@resend.dev>";
+  process.env.CONTACT_FROM || "VDCsoft <onboarding@resend.dev>";
 
 const requiredEnv = ["RESEND_API_KEY"];
 
@@ -51,7 +51,7 @@ export default async function handler(req, res) {
 
   const subject = `New website enquiry from ${name}`;
   const html = `
-    <h2>New enquiry from VDCSoft contact form</h2>
+    <h2>New enquiry from VDCsoft contact form</h2>
     <p><strong>Name:</strong> ${name}</p>
     <p><strong>Email:</strong> ${email}</p>
     <p><strong>Company:</strong> ${company || "Not specified"}</p>

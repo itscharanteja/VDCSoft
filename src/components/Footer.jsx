@@ -19,7 +19,7 @@ export default function Footer() {
         {/* Main Footer Content */}
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <div>
-            <div className="text-xl font-bold text-accent">VDCSoft</div>
+            <div className="text-xl font-bold text-accent">VDCsoft</div>
             <div className="text-sm text-brandText/60">
               Based in Sweden · GDPR-ready
             </div>
@@ -45,7 +45,7 @@ export default function Footer() {
             </a>
           </nav>
           <div className="text-center text-sm text-gray-500 md:text-right">
-            © {year} VDCSoft ·{" "}
+            © {year} VDCsoft ·{" "}
             <Link to="/privacy" className="underline">
               Privacy
             </Link>{" "}

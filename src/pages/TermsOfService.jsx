@@ -5,7 +5,7 @@ export default function TermsOfService() {
     <div className="container py-12">
       <h1 className="text-2xl font-semibold">Terms of Service</h1>
       <p className="mt-4 text-gray-700">
-        These terms are a placeholder for VDCSoft. Scope, payment terms and
+        These terms are a placeholder for VDCsoft. Scope, payment terms and
         deliverables will be included in each proposal and Statement of Work.
       </p>
       <section className="mt-6 bg-white p-6 rounded-2xl shadow-sm">

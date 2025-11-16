@@ -5,7 +5,7 @@ export default function PrivacyPolicy() {
     <div className="container py-12">
       <h1 className="text-2xl font-semibold">Privacy Policy</h1>
       <p className="mt-4 text-gray-700">
-        This is a placeholder Privacy Policy. VDCSoft is GDPR-ready. We collect
+        This is a placeholder Privacy Policy. VDCsoft is GDPR-ready. We collect
         only necessary contact information and store it securely. We use
         analytics to improve our service. Contact: vdfcsoft@outlook.com
       </p>

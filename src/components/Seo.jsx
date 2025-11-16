@@ -4,10 +4,10 @@ import { useLocation } from "react-router-dom";
 function useMeta({ title, description, path, image }) {
   const location = useLocation();
   useEffect(() => {
-    const t = title || "VDCSoft — Launch. Rank. Grow.";
+    const t = title || "VDCsoft — Launch. Rank. Grow.";
     const d =
       description ||
-      "VDCSoft is a full-service digital agency helping small and medium businesses grow online through web development, SEO, and digital marketing.";
+      "VDCsoft is a full-service digital agency helping small and medium businesses grow online through web development, SEO, and digital marketing.";
     document.title = t;
 
     const setMeta = (name, content, prop = "name") => {
@@ -51,7 +51,7 @@ export default function Seo(props) {
     script.text = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Organization",
-      name: "VDCSoft",
+      name: "VDCsoft",
       url: "https://www.vdcsoft.se",
       logo: "https://www.vdcsoft.se/favicon.svg",
       sameAs: [],

@@ -20,7 +20,7 @@ export default function Hero() {
               Launch. Rank. Grow.
             </h1>
             <p className="mt-4 text-brandText/80 max-w-prose">
-              VDCSoft is a full-service digital agency helping small and medium
+              VDCsoft is a full-service digital agency helping small and medium
               businesses grow online through web development, SEO, and digital
               marketing.
             </p>

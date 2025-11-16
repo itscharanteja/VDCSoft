@@ -1,6 +1,6 @@
-# VDCSoft — Starter Website (React + Vite)
+# VDCsoft — Starter Website (React + Vite)
 
-This repository is a scaffold for the VDCSoft startup website built with React + Vite and Tailwind CSS. It's designed as a production-ready front-end skeleton focusing on performance, accessibility, and SEO.
+This repository is a scaffold for the VDCsoft startup website built with React + Vite and Tailwind CSS. It's designed as a production-ready front-end skeleton focusing on performance, accessibility, and SEO.
 
 Key features:
 

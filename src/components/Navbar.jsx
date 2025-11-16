@@ -37,7 +37,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <Link to="/" className="flex items-center gap-2">
-              <img src={logo} alt="VDCSoft Logo" className="h-10 w-auto" />
+              <img src={logo} alt="VDCsoft Logo" className="h-10 w-auto" />
               <span className="text-xl font-bold text-accent">VDCsoft.</span>
             </Link>
             <span className="hidden text-sm text-brandText/60 sm:inline">
@@ -78,6 +78,20 @@ export default function Navbar() {
                     </a>
                   </li>
                 ))}
+                <li>
+                  <div className="flex items-center rounded-xl border border-secondary/40 text-sm">
+                    <button
+                      type="button"
+                      className="px-2 py-2 rounded-l-xl text-brandText/70 transition hover:text-brandText focus-ring"
+                      aria-label="Switch to Swedish (inactive placeholder)"
+                    >
+                      SV
+                    </button>
+                    <span className="px-3 py-2 rounded-r-xl bg-secondary/10 text-brandText font-medium">
+                      EN
+                    </span>
+                  </div>
+                </li>
                 <li>
                   <button
                     onClick={() => handleNavClick("contact")}
@@ -121,6 +135,20 @@ export default function Navbar() {
                     </a>
                   </li>
                 ))}
+                <li>
+                  <div className="flex w-full overflow-hidden rounded-xl border border-secondary/30 text-sm">
+                    <button
+                      type="button"
+                      className="w-1/2 px-4 py-3 text-center text-brandText/70 transition hover:text-brandText focus-ring"
+                      aria-label="Switch to Swedish (inactive placeholder)"
+                    >
+                      SV
+                    </button>
+                    <div className="w-1/2 bg-secondary/10 px-4 py-3 text-center font-semibold text-brandText">
+                      EN
+                    </div>
+                  </div>
+                </li>
               </ul>
               <button
                 onClick={() => handleNavClick("contact")}
